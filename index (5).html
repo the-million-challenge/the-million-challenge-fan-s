@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Comprar Coronas</title>
+    <style>
+      body { font-family: system-ui, Arial, sans-serif; padding: 1rem; max-width: 480px; margin: auto; }
+      .error { color: #b00020; margin-top: .5rem; }
+      .success { color: #0a7f3b; margin-top: .5rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Comprar Coronas</h1>
+
+    <div id="coronas-count" aria-live="polite">Coronas: 0</div>
+
+    <form id="compra-form" aria-describedby="compra-help" novalidate>
+      <label for="cantidad-coronas">Cantidad de coronas</label>
+      <input id="cantidad-coronas" name="cantidad" type="number" min="1" step="1" inputmode="numeric" required />
+      <div id="compra-help" style="font-size:.9rem;color:#555;margin-top:.25rem">Introduce un número entero positivo.</div>
+
+      <div id="error-message" class="error" role="alert" aria-atomic="true" style="display:none"></div>
+      <div id="success-message" class="success" aria-live="polite" style="display:none"></div>
+
+      <button id="comprar-btn" type="submit">Comprar</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
